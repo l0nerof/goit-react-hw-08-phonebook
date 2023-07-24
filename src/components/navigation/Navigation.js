@@ -4,8 +4,12 @@ import css from './Navigation.module.css';
 export function Navigation() {
   return (
     <nav className={css.Navigation}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/contacts">Contacts</NavLink>
+      <NavLink to="/" className={css.Home}>
+        Home
+      </NavLink>
+      <NavLink to="/contacts" className={css.Contacts}>
+        Contacts
+      </NavLink>
     </nav>
   );
 }

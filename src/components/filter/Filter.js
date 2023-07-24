@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
+import css from './Filter.module.css';
 
 function Filter({ filter, handleChange }) {
   return (
-    <label>
-      Filter contacts by name:
-      <input
-        type="text"
-        value={filter}
-        onChange={handleChange}
-        style={{ marginLeft: 10 }}
-      />
-    </label>
+    <div className={css.formContainer}>
+      <label>
+        Filter contacts by name:
+        <input type="text" value={filter} onChange={handleChange} />
+      </label>
+    </div>
   );
 }
 

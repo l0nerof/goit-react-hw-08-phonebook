@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import css from './ContactForm.module.css';
 
 export default function ContactForm({ handleSubmit }) {
   const [name, setName] = useState('');
@@ -21,7 +22,7 @@ export default function ContactForm({ handleSubmit }) {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={css.formContainer}>
       <label>
         Name:
         <input
@@ -32,7 +33,6 @@ export default function ContactForm({ handleSubmit }) {
           required
           value={name}
           onChange={handleChange}
-          style={{ marginLeft: 10 }}
         />
       </label>
 

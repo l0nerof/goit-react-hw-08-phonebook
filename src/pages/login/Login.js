@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
+import css from './Login.module.css';
 
 export function Login() {
   const [email, setEmail] = useState('');
@@ -38,8 +39,8 @@ export function Login() {
 
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={css.Main}>Login</h1>
+      <form onSubmit={handleSubmit} className={css.formContainer}>
         <label>
           Email
           <input

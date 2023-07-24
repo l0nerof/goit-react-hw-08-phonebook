@@ -1,0 +1,19 @@
+.Nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Nav a:hover {
+  background-color: #555;
+}

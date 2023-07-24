@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types';
+import css from './ContactList.module.css';
 
 function ContactList({ contacts, handleDeleteContact }) {
   return (
-    <ul>
+    <ul className={css.contactList}>
       {contacts.map(contact => (
-        <li key={contact.id} style={{ marginBottom: 5 }}>
+        <li key={contact.id} className={css.contactItem}>
           {contact.name}: {contact.number}
-          <button
-            type="button"
-            onClick={() => handleDeleteContact(contact.id)}
-            style={{ marginLeft: 5 }}
-          >
+          <button type="button" onClick={() => handleDeleteContact(contact.id)}>
             Delete
           </button>
         </li>

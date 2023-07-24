@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { registration } from '../../redux/auth/operations';
 import { useState } from 'react';
+import css from './Registration.module.css';
 
 export function Registration() {
   const [name, setName] = useState('');
@@ -43,8 +44,8 @@ export function Registration() {
 
   return (
     <div>
-      <h1>Registration</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={css.Main}>Registration</h1>
+      <form onSubmit={handleSubmit} className={css.formContainer}>
         <label>
           Username
           <input type="text" name="name" value={name} onChange={handleChange} />

@@ -9,6 +9,7 @@ import {
   fetchContactsAsync,
 } from '../../redux/contactsSlice';
 import { setFilter } from '../../redux/filterSlice';
+import css from './Contacts.module.css';
 
 export function Contacts() {
   const contacts = useSelector(state => state.contacts.items);
@@ -57,9 +58,9 @@ export function Contacts() {
 
   return (
     <div style={{ marginLeft: 40 }}>
-      <h1>Phonebook</h1>
+      <h1 className={css.Main}>Phonebook</h1>
       <ContactForm handleSubmit={handleSubmit} />
-      <h2>Contacts</h2>
+      <h2 className={css.Main}>Contacts</h2>
       <Filter filter={filter} handleChange={handleFilterChange} />
       {isLoading ? (
         <div>Loading...</div>
